@@ -1,0 +1,12 @@
+pandas
+numpy
+scikit-learn>=1.2
+mlflow
+joblib
+fastapi
+uvicorn
+pydantic
+kaggle
+pytest
+httpx
+tabulate

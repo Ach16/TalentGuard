@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-family: 'Inter', system-ui, sans-serif;
+    color-scheme: dark;
+  }
+  
+  body {
+    @apply bg-[#0B1020] text-slate-100 antialiased selection:bg-[#695CFF]/30 selection:text-indigo-200 min-h-screen overflow-x-hidden;
+  }
+}
+
+/* Custom Scrollbar for Dark Mode */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0B1020;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1E2D52;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #2A3C6B;
+}
+
+/* Glassmorphism utility */
+.glass-panel {
+  background: rgba(19, 28, 53, 0.7);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(30, 45, 82, 0.8);
+}
+
+.glass-card {
+  background: linear-gradient(135deg, rgba(22, 31, 53, 0.9) 0%, rgba(19, 28, 53, 0.7) 100%);
+  border: 1px solid rgba(38, 55, 99, 0.6);
+}
+
+.glass-card:hover {
+  border-color: rgba(105, 92, 255, 0.4);
+  box-shadow: 0 8px 25px -5px rgba(105, 92, 255, 0.15);
+}
+
+/* Tooltip & chart override styles */
+.recharts-default-tooltip {
+  background-color: #11182B !important;
+  border: 1px solid #2A3C6B !important;
+  border-radius: 8px !important;
+  color: #F8FAFC !important;
+  box-shadow: 0 10px 25px -5px rgba(0,0,0,0.5) !important;
+}
+
+.recharts-tooltip-item-name, .recharts-tooltip-item-value {
+  color: #E2E8F0 !important;
+}
